@@ -1,0 +1,7 @@
+# These files are ignored since they are copied verbatim from:
+# https://github.com/mpaland/printf/tree/master
+memcmp.c
+memcpy.c
+memmove.c
+memset.c
+strlen.c

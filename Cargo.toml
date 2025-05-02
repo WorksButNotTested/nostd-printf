@@ -1,0 +1,32 @@
+[package]
+name = "nostd-printf"
+description = "Rust crate containing an embedded version of printf which can be used in `no_std` projects which aren't linked to `libc`."
+version = "0.1.0"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/WorksButNotTested/nostd-printf"
+keywords = ["nostd", "printf"]
+edition = "2024"
+rust-version = "1.85"
+categories = ["embedded", "os"]
+authors = [
+  "wfdewith <wf@dewith.io>",
+  "WorksButNotTested <62701594+WorksButNotTested@users.noreply.github.com>",
+]
+documentation = "https://docs.rs/nostd-printf"
+
+
+[lib]
+crate-type = ["rlib"]
+
+[features]
+default = ["bindings"]
+# Build rust bindings for the functions
+bindings = []
+
+[build-dependencies]
+bindgen = { version = "0.71.1" }
+cc = { version = "1.2.20" }
+just = { version = "1.40.0" }
+
+[dev-dependencies]
+once_cell = "1.17"
