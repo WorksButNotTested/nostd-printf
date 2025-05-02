@@ -1,7 +1,7 @@
 [package]
 name = "nostd-printf"
 description = "Rust crate containing an embedded version of printf which can be used in `no_std` projects which aren't linked to `libc`."
-version = "0.1.0"
+version = "0.1.1"
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/WorksButNotTested/nostd-printf"
 keywords = ["nostd", "printf"]
