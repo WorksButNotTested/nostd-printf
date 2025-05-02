@@ -17,6 +17,7 @@ fn compile(file: &str, output: &str) {
 fn build_bindings() {
     let bindings = bindgen::Builder::default()
         .use_core()
+        .blocklist_type("max_align_t")
         .header("include/printf.h")
         .generate()
         .expect("Unable to generate bindings");
