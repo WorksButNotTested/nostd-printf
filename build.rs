@@ -30,10 +30,6 @@ fn build_bindings() {
 fn main() {
     println!("cargo:rerun-if-changed=include");
     println!("cargo:rerun-if-changed=src");
-
     compile("src/printf.c", "printf");
-
-    if cfg!(feature = "bindings") {
-        build_bindings();
-    }
+    build_bindings();
 }

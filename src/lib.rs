@@ -3,9 +3,8 @@
 //! Rust crate containing an embedded version of printf which can be used in
 //! `no_std` projects which aren't linked to `libc`.
 #![cfg_attr(not(test), no_std)]
-#![cfg_attr(feature = "bindings", allow(non_camel_case_types))]
+#![allow(non_camel_case_types)]
 
-#[cfg(feature = "bindings")]
 include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
 
 // Unit tests
